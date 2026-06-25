@@ -40,7 +40,7 @@ canvas {
   left: 50%;
   top: 50%;
   width: 1140px;
-  height: 950px;
+  height: 918px;
   transform: translate(-50%, -50%);
   z-index: 999;
   pointer-events: none;
