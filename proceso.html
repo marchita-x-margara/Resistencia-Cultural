@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Proceso - Resistencia Cultural</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Special+Elite&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="proceso.css">
+</head>
+ 
+<body>
+ 
+  <header class="header-secundario">
+  <nav class="nav-secundario">
+  <a href="juego/index.html">JUGAR</a>
+  <span>·</span>
+
+  <a href="galeria.html">Galería</a>
+  <span>·</span>
+
+  <a href="porque.html">POR QUÉ?</a>
+  <span>·</span>
+
+  <a href="botonete.html">WAINER</a>
+  <span>·</span>
+
+  <a href="festilunar.html">FESTI LUNAR</a>
+  <a href="index.html">INICIO</a>
+  <span>·</span>
+
+</nav>
+  <div class="header-der">
+    <a href="javascript:history.back()" class="volver">← volver</a>
+  </div>
+</header>
+ 
+  <main>
+ 
+    <div class="stack">
+
+ <div class="hoja" id="hoja-0" onclick="abrirHoja(0)">
+  <div class="tab">
+    <span class="num">x</span>
+    <span class="titulo">Audios</span>
+    <span class="flecha" onclick="toggleHoja(event, 0)">↓</span>
+  </div>
+
+  <div class="cuerpo">
+
+    <div class="visuales">
+      <img src="proceso.jpg" class="imagen-proceso">
+
+      <video class="video-proceso" autoplay muted loop playsinline>
+        <source src="diciembre.mp4" type="video/mp4">
+      </video>
+    </div>
+
+<h2 class="titulo-proyecto">Archivo vivo</h2>
+    <p class="descripcion">
+     Entre las escenas se cuelan audios de recitales, festivales y encuentros reales: gente cantando, bandas preparándose para tocar y voces agradeciendo desde un micrófono. Son grabaciones reunidas a lo largo de los años en distintos espacios, unidas por las mismas ganas de crear y compartir. Estas voces son el rastro de una cultura que se sostiene colectivamente y de una comunidad que, frente a las dificultades, sigue encontrando formas de reunirse y resistir.
+    </p>
+     <button class="cerrar" onclick="cerrarHoja(event, 0)">
+      ← cerrar
+    </button>
+
+  </div>
+</div>
+
+  <div class="hoja" id="hoja-1" onclick="abrirHoja(1)">
+    <div class="tab">
+      <span class="num">x</span>
+      <span class="titulo">collage y el fanzine</span>
+      <span class="flecha" onclick="toggleHoja(event, 1)">↓</span>
+    </div>
+
+   <div class="cuerpo">
+
+  <div class="visuales">
+  <img src="byw2.jpg" class="imagen-proceso">
+
+  <div class="visuales">
+    <img src="byw.JPG" class="imagen-proceso2">
+  </div>
+</div>
+
+<h2 class="titulo-proyecto">Estética de la autogestión</h2>
+  <p class="descripcion">
+    El collage y el fanzine han sido herramientas fundamentales para difundir ideas y dar identidad a los espacios culturales. En contextos de precariedad económica, las fotocopias en blanco y negro, los recortes y las imágenes superpuestas se convirtieron en una estética propia, nacida de la creatividad y la autogestión.
+  </p>
+    <button class="cerrar" onclick="cerrarHoja(event, 1)">
+      ← cerrar
+    </button>
+
+  </div>
+</div>
+
+  <div class="hoja" id="hoja-2" onclick="abrirHoja(2)">
+    <div class="tab">
+      <span class="num">x</span>
+      <span class="titulo">Existir sin permiso</span>
+      <span class="flecha" onclick="toggleHoja(event, 2)">↓</span>
+    </div>
+
+    <div class="cuerpo">
+
+ <div class="visuales">
+  <video class="video-proceso1" autoplay muted loop playsinline>
+    <source src="chicas1.mp4" type="video/mp4">
+  </video>
+
+  <div class="videos-chicos">
+    <video class="video-proceso2" autoplay muted loop playsinline>
+      <source src="chicas2.mp4" type="video/mp4">
+    </video>
+    <video class="video-proceso3" autoplay muted loop playsinline>
+      <source src="chicas3.mp4" type="video/mp4">
+    </video>
+  </div>
+</div>
+<h2 class="titulo-proyecto">Cuerpos que confrontan</h2>
+  <p class="descripcion">
+    Los personajes fueron creados mucho antes de este proyecto, pero fueron atravesados por la gente de estos ambientes. Pelo extravagante, cadenas, ropa suelta o ajustada, maquillaje o capuchas de peluche: todo como forma de expresión. Son todas mujeres, nacidas como respuesta a la falta de representación que encontraba en personajes masculinos disruptivos del cine. Mujeres que confrontan, que no existen para el deseo masculino, sino para habitar su propia imagen.
+  </p>
+
+    <button class="cerrar" onclick="cerrarHoja(event, 2)">
+      ← cerrar
+    </button>
+
+  </div>
+</div>
+
+
+  <div class="hoja" id="hoja-3" onclick="abrirHoja(3)">
+    <div class="tab">
+      <span class="num">x</span>
+      <span class="titulo">Cultura en disputa</span>
+      <span class="flecha" onclick="toggleHoja(event, 3)">↓</span>
+    </div>
+
+    <div class="cuerpo">
+
+  <div class="visuales">
+  <div class="superposicion">
+    <img src="cultura.JPG" class="imagen-proceso img-base">
+    <img src="disputa.JPG" class="imagen-proceso img-encima">
+  </div>
+</div>
+
+
+  <p class="descripcion">
+    No hay finales completamente felices ni completamente tristes. Ambos caminos dejan algo en pie y algo perdido, como ocurre en los procesos reales de estos espacios. La intención es que el jugador se pregunte qué significa sostener una identidad colectiva, qué se gana y qué se sacrifica en ese intento. Busca abrir una puerta a quienes no han tenido contacto con estos lugares cómo se construyen, cómo se sostienen y qué fuerzas los atraviesan día a día.
+  </p>
+
+    <button class="cerrar" onclick="cerrarHoja(event, 3)">
+      ← cerrar
+    </button>
+
+  </div>
+</div>
+</div>
+<div class="galeria-videos">
+<h2 class="texto-collage">
+  SI NO EXISTE EL ESPACIO,<br>LO CONSTRUIMOS
+</h2>
+   <video class="v1" src="video1.mp4" autoplay muted loop playsinline></video>
+  <video class="v2" src="video2.mp4" autoplay muted loop playsinline></video>
+  <video class="v3" src="video3.mp4" autoplay muted loop playsinline></video>
+  <video class="v4" src="video4.mp4" autoplay muted loop playsinline></video>
+</div>
+</div>
+  </main>
+ 
+  <script>
+    const hojas = document.querySelectorAll('.hoja');
+ 
+    function abrirHoja(i) {
+      if (hojas[i].classList.contains('open')) return;
+      hojas.forEach((h, idx) => {
+        h.classList.remove('open', 'pasada');
+        if (idx < i) h.classList.add('pasada');
+      });
+      hojas[i].classList.add('open');
+      setTimeout(() => {
+        hojas[i].scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 60);
+      controlarVideosFondo();
+    }
+ 
+    function cerrarHoja(e, i) {
+  e.stopPropagation();
+  const hoja = hojas[i];
+  
+  hoja.style.height = hoja.scrollHeight + 'px';
+  hoja.style.overflow = 'hidden';
+  
+  requestAnimationFrame(() => {
+    hoja.style.transition = 'height 0.4s ease, opacity 0.3s ease';
+    hoja.style.height = '48px'; 
+    hoja.style.opacity = '0';
+  });
+
+  hoja.addEventListener('transitionend', () => {
+    hoja.style.transition = '';
+    hoja.style.height = '';
+    hoja.style.opacity = '';
+    hoja.style.overflow = '';
+    hoja.classList.remove('open');
+    hojas.forEach((h, idx) => {
+      if (idx < i) h.classList.remove('pasada');
+    });
+  }, { once: true });
+  hoja.addEventListener('transitionend', () => {
+    hoja.style.transition = '';
+    hoja.style.height = '';
+    hoja.style.opacity = '';
+    hoja.style.overflow = '';
+    hoja.classList.remove('open');
+    hojas.forEach((h, idx) => {
+      if (idx < i) h.classList.remove('pasada');
+    });
+    controlarVideosFondo(); // ← agregá esto
+  }, { once: true });
+}
+    function toggleHoja(e, i) {
+  e.stopPropagation();
+  if (hojas[i].classList.contains('open')) {
+    cerrarHoja(e, i);
+  } else {
+    abrirHoja(i);
+  }
+}
+function controlarVideosFondo() {
+  const videos = document.querySelectorAll('.galeria-videos video');
+  const hayHojaAbierta = document.querySelector('.hoja.open');
+
+  videos.forEach(video => {
+    if (hayHojaAbierta) {
+      video.pause();
+    } else {
+      video.play();
+    }
+  });
+}
+videos.forEach(video => {
+  video.pause();
+  video.currentTime = video.currentTime; // evita glitches en algunos browsers
+});
+  </script>
+ 
+</body>
+</html>
+ 

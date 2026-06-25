@@ -1,0 +1,56 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  min-height: 100vh;
+}
+
+canvas {
+  display: block;
+}
+.volver {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 9999;
+
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+
+  background: rgba(255,255,255,0.9);
+  color: black;
+  font-family: 'Courier New', monospace;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.volver:hover {
+  background: white;
+}
+
+.marco {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 1140px;
+  height: 950px;
+  transform: translate(-50%, -50%);
+  z-index: 999;
+  pointer-events: none;
+  mix-blend-mode:overlay;
+}
+
+canvas {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}

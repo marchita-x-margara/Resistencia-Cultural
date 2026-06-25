@@ -1,0 +1,472 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: "sinopsis";
+  src: url("holidays homework.ttf") format("truetype"); 
+  }
+@font-face {  
+  font-family: "porque";
+  src: url("ArchivoBlack-Regular.ttf") format("truetype");
+}
+@font-face {  
+  font-family: "nav";
+  src: url("SmallTypeWritingMedium.ttf") format("truetype");
+}
+
+body {
+background-image: url('titulo11.jpg');
+background-repeat: repeat;
+background-size: 500px 700px;
+font-family: 'Courier New', monospace;
+isolation: auto;
+cursor: crosshair;
+}
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  padding: 20px 40px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+nav a {
+  position: absolute;
+  text-decoration: none;
+  color: black;
+  font-size: 2rem;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-family: "Special Elite", system-ui;
+  filter:drop-shadow(1px 1px 1px rgb(53, 52, 52));
+}
+.volver {
+  text-decoration: none;
+  color: black;
+  font-family: 'Courier New', monospace;
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 5px;
+  border-bottom: 2px solid black;
+  /* sacá el display: block */
+  align-self: flex-start; /* se alinea arriba dentro del flex del header */
+}
+ 
+.header-der {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-left: auto;
+}
+main {
+  position: relative;
+  margin-top: 50px;
+  width: 100%;
+  height: 90vh;
+}
+
+main img {
+  width: 90%;
+  height: 113%;
+  display: block;
+  margin-top: -50px;
+  margin-left: 80px;
+}
+.sinopsis {
+    position: absolute;
+    bottom: -80px;
+    right: 10px;
+
+    width: 450px;
+    height: 180px;
+
+    background-image: url('papelon.png');
+    background-size: 100% 100%;
+    
+
+    display: flex;
+    align-items: center;
+ }
+
+.sinopsis p {
+   font-family: "Special Elite", system-ui;
+    text-align: center;
+    font-size: 2.5rem;
+    color: rgb(63, 55, 55);
+    margin-bottom: -10px;
+}
+.link-porque {
+ top: 120px;
+  left: 80px;
+  background-image: url('botonPorque.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+padding: 50px 100px;
+width: 280px;
+  height: 110px;
+}
+
+.link-botonete {
+   top: 200px;
+  left: 270px;background-image: url('botonBotonete.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+ padding: 30px 40px;
+width: 190px;
+  height: 80px;
+}
+
+.link-testimonios {
+  top: 30px;
+  left: 330px;
+  background-image: url('botonTestimonios.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+ padding: 30px 40px;
+ width: 300px;
+  height: 110px;
+}
+.link-FestiLunar {
+  top: 30px;
+  left: 630px;
+  background-image: url('botonTestimonios.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+ padding: 30px 40px;
+ width: 300px;
+  height: 110px;
+}
+
+.link-jugar {
+  top: -10px;
+  left: 20px;background-image: url('botonBoton.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 30px 40px;
+width: 270px;
+  height: 170px;
+  transform: rotate(-23deg);
+}
+
+.link-galeria {
+  top: 140px;
+  left: 490px;background-image: url('botonGaleria.png');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  padding: 30px 40px;
+  width: 190px;
+  height: 90px;
+}
+.link-porque:hover {
+  background-image: url('botonPorqueNegro.png');
+  color: white;
+}
+
+.link-galeria:hover {
+  background-image: url('botonGaleriaNegro.png');
+  color: white;
+}
+
+.link-testimonios:hover {
+  background-image: url('botonTestimoniosNegro.png');
+  color: white;
+}
+.link-FestiLunar:hover {
+  background-image: url('botonTestimoniosNegro.png');
+  color: white;
+}
+
+.link-jugar:hover {
+  background-image: url('botonBotonNegro.png');
+  color: white;
+}
+
+.link-botonete:hover {
+  background-image: url('botonBotoneteNegro.png');
+  color: white;
+}
+.link-porque span {
+  font-size: rem;
+  margin-left: -50px;
+  margin-top: -5px;
+  display: block;
+  transform: rotate(-3deg);
+    white-space: nowrap;
+}
+.link-testimonios span {
+ font-size: 2rem;
+  display: block;
+  transform: rotate(-7deg);
+   margin-left: 30px;
+  margin-top: 13px;
+}
+.link-FestiLunar span {
+ font-size: 1.7rem;
+  display: block;
+  transform: rotate(-7deg);
+   margin-left:5px;
+  margin-top: 13px;
+}
+.link-botonete span {
+  font-size: 1.7rem;
+  display: block;
+  transform: rotate(-6deg);
+}
+.link-jugar span {
+  display: block;
+  transform: rotate(23deg);
+  font-size: 3.5rem;
+  margin-left: 32px;
+  margin-top:30px;
+}
+.link-galeria span {
+   font-size: 1.5rem;
+  display: block;
+  transform: rotate(-10deg);
+  margin-top: 7px;
+}
+.pagina-porque {
+  display: flex;
+  gap: 0;
+  padding: 0;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+ 
+.columna-izq {
+  width: 55%;
+  padding: 200px 60px 120px 40px;
+  position: relative;
+  z-index: auto; 
+}
+
+.resaltado {
+  background: rgba(255, 189, 47, 0.726);
+  padding: 0 4px;
+}
+.resaltado2 {
+  background: rgba(255, 44, 29, 0.719);
+  padding: 0 4px;
+}
+.seccion-texto {
+  font-family: "nav", cursive;
+  min-height: 100vh;
+  margin-bottom: 80px;
+  transition: opacity 0.4s ease;
+}
+ 
+.seccion-texto.activa {
+  opacity: 1;
+}
+ 
+.texto-grande {
+  font-size: 1.4rem;
+  font-weight: bold;
+  margin-bottom: 30px;
+  line-height: 1.3;
+  margin-top: -40px;
+  font-family: porque;
+}
+ 
+.columna-izq p:not(.texto-grande):not(.label-seccion):not(.frase-final) {
+  margin-bottom: 20px;
+  line-height: 1.8;
+  font-size: 2.5rem;
+  opacity: 0.8;
+}
+ 
+.label-seccion {
+  font-size: 6rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  opacity: 0.5;
+  margin-bottom: 12px;
+}
+ 
+.frase-final {
+  font-size: 1.1rem;
+  font-weight: bold;
+  line-height: 1.6;
+  border-left: 3px solid currentColor;
+  padding-left: 20px;
+  margin-top: 20px;
+}
+ 
+.columna-der {
+  width: 40%;
+  position: sticky;
+  top: 0;
+  height: 100vh;
+  overflow: hidden;
+}
+ 
+ .imagen-sticky {
+  margin-top: 160px;
+  position: relative;
+  width: 80%;
+  height: 80%;
+  margin-left: 15%;
+}
+.img-stencil {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.img-stencil {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+.img-stencil.visible { opacity: 1; }
+ 
+.imagen-sticky img.visible {
+  opacity: 1;
+}
+ 
+.columna-der {
+  background-image: url('back.png');
+  opacity: 0.8;
+  background-size: 400px 600px;
+  background-position: left -200px top 140px;
+}
+ 
+.caption-overlay {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  right: 20px;
+  font-size: 1rem;
+  color: rgba(0, 0, 0, 0.7);
+  z-index: 3;
+  opacity: 0;
+  transition: opacity 0.4s ease;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
+ 
+.caption-overlay.visible {
+  opacity: 1;
+}
+.header-secundario{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  padding: 20px 40px;
+}
+.nav-secundario{
+  display:flex;
+  gap:20px;
+}
+
+.header-der{
+  margin-left:auto;
+}
+.header-secundario .nav-secundario a{
+  position: static !important;
+}
+.nav-secundario a{
+  font-family:"nav";
+  text-transform:uppercase;
+  text-decoration:none;
+  color:black;
+  letter-spacing:0.15em;
+  font-size: 1rem;
+  padding:0 8px;
+}
+
+.nav-secundario span{
+  font-family:"nav";
+  opacity:.7;
+  margin:0 2px;
+}
+.wainer-container{
+    width: 100%;
+    padding: 80px 40px;
+}
+
+.texto-wainer{
+    width: 100%;
+}
+
+.texto-wainer h2{
+  font-family: porque;
+    font-size: 3rem;
+    font-weight: normal;
+    margin-top: -900px;
+    opacity: 0.8;
+}
+
+.texto-wainer p{
+  font-family: nav;
+    font-size: 2.3rem;
+    line-height: 1.3;
+    margin-bottom: 50px;
+     width: 100%;
+}
+.imagenes-wainer{
+    position: relative;
+    object-fit: cover;
+    width: 100%;
+    min-height: 900px;
+}
+
+.img-stencil2{
+    display:block;
+    position:absolute;
+    object-fit:cover;
+}
+.foto-1{
+    float: right;
+    width: 620px;
+    height: 500px;
+    margin-right: -10px;
+    z-index: 1;
+    position: relative;
+}
+
+.foto-2{
+    float: right;
+    width: 500px;
+    height: 500px;
+    margin-top: -60px;
+    margin-right: -40px;
+    z-index: 2;
+    position: relative;
+}
+
+.boton-papel{
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    z-index: 3;
+    transition: transform .2s;
+}
+
+.boton-papel:hover{
+    transform: scale(1.05);
+}
+
+.boton-papel img{
+    width: 350px;
+    display: block;
+}

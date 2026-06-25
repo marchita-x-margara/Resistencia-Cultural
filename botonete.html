@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wainer - Resistencia Cultural</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="pagina-scroll">
+
+<header class="header-secundario">
+  <nav class="nav-secundario">
+    <a href="juego/index.html">JUGAR</a>
+    <span>·</span>
+
+    <a href="galeria.html">Galería</a>
+    <span>·</span>
+
+    <a href="proceso.html">Proceso</a>
+    <span>·</span>
+
+    <a href="porque.html">Por qué?</a>
+    <span>·</span>
+
+    <a href="festilunar.html">Festi Lunar</a>
+    <span>·</span>
+
+    <a href="index.html">INICIO</a>
+  </nav>
+</header>
+
+<main class="wainer-container">
+
+  <section class="texto-wainer">
+    
+ <a class="boton-papel">
+    <img src="wainerBoton.png" alt="">
+  </a>
+<div class="imagenes-wainer">
+    <canvas class="img-stencil2 foto-1" data-src="wainer1.jpg"></canvas>
+    <canvas class="img-stencil2 foto-2" data-src="wainer2.jpg"></canvas>
+</div>
+
+  <h2>La influencia del Wainer</h2>
+  <p>
+    Tanto el Wainer como la historia del juego parten de la misma idea: un espacio abandonado que encuentra una nueva vida a través de la organización colectiva. Un lugar construido para que otras personas puedan desarrollar proyectos y encontrarse.<br>
+De alguna manera, todo este proyecto funciona como un collage de voces, experiencias y formas de entender <span class="resaltado2">la resistencia cultural desde la práctica cotidiana.</span><br>
+Ubicado en una esquina de Calzada, entre árboles, colores e historias acumuladas en sus paredes, el Wainer es un espacio en constante transformación. Talleres, fechas musicales, encuentros y propuestas de todo tipo conviven bajo una misma idea: demostrar que otra forma de <span class="resaltado">hacer cultura es posible cuando se construye colectivamente y se sostiene desde la autogestión.</span>
+  </p>
+
+</section>
+
+</main>
+<script>
+function applyStencil2(canvas, src) {
+  const img = new Image();
+
+  img.onload = () => {
+
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+
+    const ctx = canvas.getContext("2d");
+
+    const scale = Math.max(
+      canvas.width / img.naturalWidth,
+      canvas.height / img.naturalHeight
+    );
+
+    const x = (canvas.width - img.naturalWidth * scale) / 2;
+    const y = (canvas.height - img.naturalHeight * scale) / 2;
+
+    ctx.drawImage(
+      img,
+      x,
+      y,
+      img.naturalWidth * scale,
+      img.naturalHeight * scale
+    );
+
+    const imageData = ctx.getImageData(
+      0,
+      0,
+      canvas.width,
+      canvas.height
+    );
+
+    const d = imageData.data;
+
+    for (let i = 0; i < d.length; i += 4) {
+
+  
+  let lum =
+    0.299 * d[i] +
+    0.587 * d[i + 1] +
+    0.114 * d[i + 2];
+
+  lum = (lum - 100) * 2 + 155;
+
+  const variacion = (Math.random() - 0.5) * 40;
+  lum += variacion * (3 - lum / 255);
+
+  lum = Math.max(0, Math.min(255, lum));
+
+  
+  const keepColor = 0.35; 
+
+  d[i]     = lum * (1 - keepColor) + d[i] * keepColor;
+  d[i + 1] = lum * (1 - keepColor) + d[i + 1] * keepColor;
+  d[i + 2] = lum * (1 - keepColor) + d[i + 2] * keepColor;
+}
+
+    ctx.putImageData(imageData, 0, 0);
+  };
+
+  img.src = src;
+}
+
+
+
+
+const nuevasFotos = [
+  "wawainer (1).jpg",
+  "wawainer (2).jpg",
+  "wawainer (3).jpg",
+  "wawainer (4).jpg",
+  "wawainer (5).jpg",
+  "wawainer (6).jpg",
+  "wawainer (7).jpg"
+];
+
+document.querySelectorAll(".img-stencil2").forEach(canvas => {
+
+  applyStencil2(canvas, canvas.dataset.src);
+
+  let indice = 0;
+
+  canvas.style.cursor = "pointer";
+
+  canvas.addEventListener("click", () => {
+
+    applyStencil2(canvas, nuevasFotos[indice]);
+
+    indice++;
+
+    if (indice >= nuevasFotos.length) {
+      indice = 0;
+    }
+
+  });
+});
+</script>
+</body>
+
+</html>

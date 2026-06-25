@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Por qué - Resistencia Cultural</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body.pagina-scroll,
+    body.pagina-scroll html {
+      overflow: auto !important;
+      height: auto !important;
+    }
+    body.pagina-scroll main {
+      height: auto !important;
+      margin-top: 0 !important;
+    }
+  </style>
+</head>
+ 
+<body class="pagina-scroll">
+ 
+  <header class="header-secundario">
+  <nav class="nav-secundario">
+  <a href="juego/index.html">JUGAR</a>
+  <span>·</span>
+
+  
+  <a href="galeria.html">Galería</a>
+  <span>·</span>
+
+  
+  <a href="proceso.html">PROCESO</a>
+  <span>·</span>
+
+
+  <a href="botonete.html">WAINER</a>
+  <span>·</span>
+
+  <a href="festilunar.html">FESTI LUNAR</a>
+
+  <a href="index.html">INICIO</a>
+  <span>·</span>
+</nav>
+  
+</header>
+ 
+  <main class="pagina-porque">
+ 
+    <div class="columna-izq">
+ 
+      <div class="seccion-texto activa" data-imagen="0">
+        <p class="texto-grande"><span class="resaltado2">Resistencia Cultural es escribir una historia en común</p>
+
+        <p>Los centros culturales comunitarios del conurbano bonaerense existen en una tensión permanente. En contextos marcados por la precariedad económica, el aislamiento y la falta de infraestructura cultural, <span class="resaltado">hacer arte muchas veces no alcanza.</span> <span class="resaltado">También es necesario organizarse.</p>
+      </div>
+
+      <div class="seccion-texto" data-imagen="1">
+        <p>No se trata solamente de programar recitales o talleres, sino de crea una comunidad integrada por artistas, militantes, docentes y vecinos.</p>
+        <p>Formar parte de la organización significa participar de una experiencia colectiva que busca dejar una huella más allá del presente. Se trata de la posibilidad de escribir una historia común y transmitirla a las generaciones que vendrán.</p>
+      </div>
+ 
+      <div class="seccion-texto" data-imagen="2">
+        <p>Quienes llegan suelen encontrar algo más que una agenda de actividades: encuentran personas dispuestas a escuchar, acompañar y ofrecer un espacio donde expresarse.</p>
+        <p>Esa red humana funciona como una forma de <span class="resaltado">refugio frente a las dificultades cotidianas.</span> Como un abrazo: una sensación de pertenencia difícil de encontrar en otros ámbitos.</p>
+      </div>
+ 
+      <div class="seccion-texto" data-imagen="3">
+
+        <p>Dar espacio para que otros se encuentren ya constituye una intervención sobre la realidad.<span class="resaltado">¿Quién permite reunirse? ¿Quién tiene acceso a lugares donde hablar, debatir, crear o simplemente pasar el tiempo?</p>
+        <p>Abrir las puertas de un centro cultural es también una toma de posición. No porque toda actividad deba transformarse en militancia explícita, sino porque habilitar la participación colectiva es, en sí mismo, un acto político.</p>
+      </div>
+ 
+      <div class="seccion-texto" data-imagen="4">
+    
+        <p>Esta mirada suele diferenciar a los espacios culturales del conurbano de los ubicados en la Ciudad de Buenos Aires. Los espacios de capital suelen contar con mayor infraestructura y una lógica más profesionalizada. En cambio, <span class="resaltado">en el conurbano los proyectos nacen desde la urgencia.</span></p>
+        <p>Quizás por eso una de las ideas más repetidas en estos espacios sea la defensa de una identidad propia. <span class="resaltado2">No son proyectos mainstream, no son capital. Y eso está bien.</p>
+        
+      </div>
+ 
+    </div>
+ 
+    <div class="columna-der">
+      <div class="imagen-sticky">
+  <canvas class="img-stencil visible" data-src="imagen1.jpg" data-index="0"></canvas>
+  <canvas class="img-stencil" data-src="imagen2.jpg" data-index="1"></canvas>
+  <canvas class="img-stencil" data-src="imagen3.jpg" data-index="2"></canvas>
+  <canvas class="img-stencil" data-src="imagen4.jpg" data-index="3"></canvas>
+  <canvas class="img-stencil" data-src="imagen5.jpg" data-index="4"></canvas>
+  <div class="caption-overlay" data-index="0">Identidad</div>
+  <div class="caption-overlay" data-index="1">Resistencia Cultural, conurbano bonaerense</div>
+  <div class="caption-overlay" data-index="2">Expresión</div>
+  <div class="caption-overlay" data-index="3">Comunidad</div>
+  <div class="caption-overlay" data-index="4">Participación</div>
+</div>
+    </div>
+ 
+  </main>
+ 
+ <script>
+const secciones = document.querySelectorAll('.seccion-texto');
+const canvases  = document.querySelectorAll('.img-stencil');
+const captions  = document.querySelectorAll('.caption-overlay');
+
+function activar(index) {
+  secciones.forEach(s => s.classList.remove('activa'));
+  secciones[index]?.classList.add('activa');
+  canvases.forEach(c => c.classList.remove('visible'));
+  document.querySelector(`.img-stencil[data-index="${index}"]`)?.classList.add('visible');
+  captions.forEach(c => c.classList.remove('visible'));
+  document.querySelector(`.caption-overlay[data-index="${index}"]`)?.classList.add('visible');
+}
+
+const observer = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      activar(parseInt(entry.target.dataset.imagen));
+    }
+  });
+}, { threshold: 0.4 });
+
+secciones.forEach(s => observer.observe(s));
+
+function applyStencil(canvas, src) {
+  const img = new Image();
+  img.onload = () => {
+    canvas.width  = canvas.offsetWidth  || 400;
+    canvas.height = canvas.offsetHeight || 600;
+    const ctx = canvas.getContext('2d');
+   const scale = Math.max(canvas.width / img.naturalWidth, canvas.height / img.naturalHeight);
+const x = (canvas.width  - img.naturalWidth  * scale) / 2;
+const y = (canvas.height - img.naturalHeight * scale) / 2;
+ctx.drawImage(img, x, y, img.naturalWidth * scale, img.naturalHeight * scale);
+    const data = ctx.getImageData(0, 0, canvas.width, canvas.height);
+    const d = data.data;
+  for (let i = 0; i < d.length; i += 4) {
+  let lum = 0.299 * d[i] + 0.587 * d[i+1] + 0.114 * d[i+2];
+  lum = (lum - 100) * 2 + 155;
+  const variacion = (Math.random() - 0.5) * 40;
+  lum += variacion * (3 - lum / 255); 
+  
+  lum = Math.max(0, Math.min(255, lum));
+  d[i] = d[i+1] = d[i+2] = lum;
+
+}
+
+ctx.putImageData(data, 0, 0);
+  };
+  img.src = src;
+}
+
+document.querySelectorAll('.img-stencil').forEach(canvas => {
+  applyStencil(canvas, canvas.dataset.src);
+});
+</script>
+</body>
+</html>
