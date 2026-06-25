@@ -147,7 +147,7 @@ function applyPhotocopy(img, canvas) {
   const d = data.data;
   for (let i = 0; i < d.length; i += 4) {
     let lum = 0.299 * d[i] + 0.587 * d[i+1] + 0.114 * d[i+2];
-    lum += (Math.random() - 0.5) * 40;  // grano suave
+    lum += (Math.random() - 0.5) * 40;
     const threshold = 80; 
     const val = lum < threshold ? 0 : 255;
     d[i] = d[i+1] = d[i+2] = val;
